@@ -1,0 +1,129 @@
+.navbar-wrapper {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.logo {
+  font-family: var(--font-logo);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.search-form {
+  flex: 1;
+  max-width: 450px;
+  margin: 0 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 11px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.icon {
+  font-size: 19px;
+  cursor: pointer;
+  color: var(--color-steel-light);
+  transition: var(--transition);
+}
+
+.icon:hover {
+  color: var(--color-accent);
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 10px;
+  font-family: var(--font-heading);
+  padding: 2px 6px;
+  border-radius: 50%;
+  min-width: 8px;
+  text-align: center;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  padding: 12px;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--color-text-dim);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.25s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--color-text);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}

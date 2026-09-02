@@ -1,0 +1,91 @@
+.profile-page {
+  max-width: 520px;
+  margin: 50px auto;
+  padding: 40px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-panel);
+}
+
+.profile-page h2 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.profile-info p {
+  margin: 14px 0;
+  font-size: 14.5px;
+  color: var(--color-text-dim);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.profile-info p strong {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.profile-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-page label {
+  margin-top: 14px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: var(--color-text-dim);
+}
+
+.profile-page input {
+  padding: 12px 14px;
+  margin-top: 6px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.profile-page input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.profile-page button {
+  margin-top: 24px;
+  padding: 12px;
+  background: var(--color-accent);
+  color: #fff;
+  border: 1px solid var(--color-accent-hover);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 13px;
+  box-shadow: 0 2px 0 var(--color-accent-hover);
+  transition: var(--transition);
+}
+
+.profile-page button:hover {
+  background: var(--color-accent-hover);
+  box-shadow: 0 2px 12px var(--color-accent-glow);
+  transform: translateY(-1px);
+}

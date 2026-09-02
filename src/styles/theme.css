@@ -1,0 +1,104 @@
+:root {
+  /* Backgrounds */
+  --color-bg: #121212;
+  --color-bg-alt: #181818;
+  --color-surface: #1e1e1e;
+  --color-surface-alt: #242424;
+
+  /* Borders / steel */
+  --color-border: #2f2f2f;
+  --color-border-light: #3d3d3d;
+  --color-steel: #555555;
+  --color-steel-light: #7a7a7a;
+
+  /* Accent (warning-light red) */
+  --color-accent: #d32f2f;
+  --color-accent-hover: #b71c1c;
+  --color-accent-glow: rgba(211, 47, 47, 0.35);
+
+  /* Text */
+  --color-text: #f2f2f2;
+  --color-text-dim: #aaaaaa;
+  --color-text-muted: #6e6e6e;
+
+  /* Type */
+  --font-display: 'Bebas Neue', 'Oswald', sans-serif;
+  --font-heading: 'Oswald', sans-serif;
+  --font-logo: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Misc */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --shadow-panel: 0 6px 24px rgba(0, 0, 0, 0.55);
+  --transition: all 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Reusable mechanical panel — sharp corner cut on one side */
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+
+/* Reusable industrial button */
+.btn-industrial {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  padding: 13px 34px;
+  background: var(--color-accent);
+  color: #fff;
+  border: 1px solid var(--color-accent-hover);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 0 var(--color-accent-hover);
+}
+
+.btn-industrial:hover {
+  background: var(--color-accent-hover);
+  box-shadow: 0 2px 12px var(--color-accent-glow);
+  transform: translateY(-1px);
+}
+
+/* Section title used across pages */
+.section-title {
+  text-align: center;
+  margin: 55px 0 25px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 22px;
+  color: var(--color-text);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  margin: 12px auto 0;
+}
+
+/* Faint riveted grid texture — apply only where needed via this class */
+.industrial-grid {
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 42px 42px;
+}

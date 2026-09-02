@@ -1,0 +1,440 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "Engine Oil Filter",
+      "category": "Filters",
+      "price": 399,
+      "mrp": 499,
+      "discount": 20,
+      "image": "/images/p1.jpg",
+      "brand": "Bosch",
+      "stock": 25,
+      "isDeal": true,
+      "rating": 4.5,
+      "description": "High-quality oil filter suitable for cars and SUVs."
+    },
+    {
+      "id": "p2",
+      "name": "Air Filter",
+      "category": "Filters",
+      "price": 299,
+      "mrp": 399,
+      "discount": 25,
+      "image": "/images/p2.jpg",
+      "brand": "Mann",
+      "stock": 40,
+      "isDeal": false,
+      "rating": 4.3,
+      "description": "Premium air filter for improved engine airflow."
+    },
+    {
+      "id": "p3",
+      "name": "Fuel Filter",
+      "category": "Filters",
+      "price": 449,
+      "mrp": 599,
+      "discount": 25,
+      "image": "/images/p3.jpg",
+      "brand": "Bosch",
+      "stock": 18,
+      "isDeal": true,
+      "rating": 4.4,
+      "description": "Durable fuel filter designed to keep fuel clean."
+    },
+    {
+      "id": "p4",
+      "name": "Front Brake Pads",
+      "category": "Braking System",
+      "price": 899,
+      "mrp": 1199,
+      "discount": 25,
+      "image": "/images/p4.jpg",
+      "brand": "Brembo",
+      "stock": 15,
+      "isDeal": true,
+      "rating": 4.7,
+      "description": "Reliable front brake pads with excellent stopping performance."
+    },
+    {
+      "id": "p5",
+      "name": "Rear Brake Disc",
+      "category": "Braking System",
+      "price": 1499,
+      "mrp": 1899,
+      "discount": 21,
+      "image": "/images/p5.jpg",
+      "brand": "TVS",
+      "stock": 10,
+      "isDeal": false,
+      "rating": 4.5,
+      "description": "Strong and durable brake disc for smooth braking."
+    },
+    {
+      "id": "p6",
+      "name": "Brake Fluid",
+      "category": "Braking System",
+      "price": 349,
+      "mrp": 449,
+      "discount": 22,
+      "image": "/images/p6.png",
+      "brand": "Castrol",
+      "stock": 30,
+      "isDeal": false,
+      "rating": 4.2,
+      "description": "High-performance brake fluid for everyday driving."
+    },
+    {
+      "id": "p7",
+      "name": "Spark Plug",
+      "category": "Engine Parts",
+      "price": 249,
+      "mrp": 299,
+      "discount": 17,
+      "image": "/images/p7.png",
+      "brand": "NGK",
+      "stock": 50,
+      "isDeal": true,
+      "rating": 4.6,
+      "description": "Efficient spark plug for reliable engine ignition."
+    },
+    {
+      "id": "p8",
+      "name": "Engine Belt",
+      "category": "Engine Parts",
+      "price": 699,
+      "mrp": 899,
+      "discount": 22,
+      "image": "/images/p8.png",
+      "brand": "Gates",
+      "stock": 20,
+      "isDeal": false,
+      "rating": 4.4,
+      "description": "Durable engine belt designed for long-lasting performance."
+    },
+    {
+      "id": "p9",
+      "name": "Clutch Plate",
+      "category": "Engine Parts",
+      "price": 1899,
+      "mrp": 2399,
+      "discount": 21,
+      "image": "/images/p9.png",
+      "brand": "Valeo",
+      "stock": 12,
+      "isDeal": true,
+      "rating": 4.6,
+      "description": "High-quality clutch plate for smooth gear changes."
+    },
+    {
+      "id": "p10",
+      "name": "Car Side Mirror",
+      "category": "Body Parts",
+      "price": 1299,
+      "mrp": 1599,
+      "discount": 19,
+      "image": "/images/p10.png",
+      "brand": "Uno Minda",
+      "stock": 14,
+      "isDeal": false,
+      "rating": 4.3,
+      "description": "Replacement side mirror with a durable housing."
+    },
+    {
+      "id": "p11",
+      "name": "Front Bumper",
+      "category": "Body Parts",
+      "price": 2499,
+      "mrp": 2999,
+      "discount": 17,
+      "image": "/images/p11.png",
+      "brand": "Lumax",
+      "stock": 8,
+      "isDeal": true,
+      "rating": 4.4,
+      "description": "Strong replacement front bumper for selected car models."
+    },
+    {
+      "id": "p12",
+      "name": "LED Headlight",
+      "category": "Body Parts",
+      "price": 1799,
+      "mrp": 2299,
+      "discount": 22,
+      "image": "/images/p12.png",
+      "brand": "Philips",
+      "stock": 16,
+      "isDeal": false,
+      "rating": 4.7,
+      "description": "Bright LED headlight designed for better road visibility."
+    },
+    {
+      "id": "p13",
+      "name": "Car Battery",
+      "category": "Electrical",
+      "price": 3499,
+      "mrp": 4299,
+      "discount": 19,
+      "image": "/images/p13.png",
+      "brand": "Exide",
+      "stock": 10,
+      "isDeal": true,
+      "rating": 4.5,
+      "description": "Long-lasting car battery for reliable starts."
+    },
+    {
+      "id": "p14",
+      "name": "LED Fog Light",
+      "category": "Electrical",
+      "price": 899,
+      "mrp": 1199,
+      "discount": 25,
+      "image": "/images/p14.png",
+      "brand": "Philips",
+      "stock": 22,
+      "isDeal": false,
+      "rating": 4.3,
+      "description": "Bright LED fog light for better visibility in low light."
+    },
+    {
+      "id": "p15",
+      "name": "Car Floor Mats",
+      "category": "Accessories",
+      "price": 1299,
+      "mrp": 1599,
+      "discount": 19,
+      "image": "/images/p15.png",
+      "brand": "3D Maxpider",
+      "stock": 18,
+      "isDeal": true,
+      "rating": 4.4,
+      "description": "Durable all-weather floor mats for a cleaner interior."
+    },
+    {
+      "id": "p16",
+      "name": "Car Perfume",
+      "category": "Accessories",
+      "price": 299,
+      "mrp": 399,
+      "discount": 25,
+      "image": "/images/p16.png",
+      "brand": "Godrej",
+      "stock": 40,
+      "isDeal": false,
+      "rating": 4.2,
+      "description": "Long-lasting car air freshener."
+    },
+    {
+      "id": "p17",
+      "name": "Bike Chain Kit",
+      "category": "Bike Parts",
+      "price": 1299,
+      "mrp": 1599,
+      "discount": 19,
+      "image": "/images/p17.png",
+      "brand": "DID",
+      "stock": 15,
+      "isDeal": true,
+      "rating": 4.5,
+      "description": "Durable chain and sprocket kit for smooth power transfer."
+    },
+    {
+      "id": "p18",
+      "name": "Bike Helmet",
+      "category": "Bike Parts",
+      "price": 1899,
+      "mrp": 2499,
+      "discount": 24,
+      "image": "/images/p18.png",
+      "brand": "Steelbird",
+      "stock": 20,
+      "isDeal": false,
+      "rating": 4.4,
+      "description": "Lightweight, ISI-certified helmet for daily riding safety."
+    },
+    {
+      "id": "p19",
+      "name": "Bike Brake Shoe",
+      "category": "Bike Parts",
+      "price": 349,
+      "mrp": 449,
+      "discount": 22,
+      "image": "/images/p19.png",
+      "brand": "TVS",
+      "stock": 30,
+      "isDeal": true,
+      "rating": 4.2,
+      "description": "Reliable brake shoe for consistent stopping power."
+    },
+    {
+      "id": "p20",
+      "name": "Bike Side Mirror",
+      "category": "Bike Parts",
+      "price": 249,
+      "mrp": 349,
+      "discount": 29,
+      "image": "/images/p20.png",
+      "brand": "Uno Minda",
+      "stock": 25,
+      "isDeal": false,
+      "rating": 4.1,
+      "description": "Clear-view replacement mirror for two-wheelers."
+    }
+  ],
+  "categories": [
+    {
+      "id": "c1",
+      "name": "Engine Parts",
+      "icon": "🔧"
+    },
+    {
+      "id": "c2",
+      "name": "Braking System",
+      "icon": "🛑"
+    },
+    {
+      "id": "c3",
+      "name": "Body Parts",
+      "icon": "🚗"
+    },
+    {
+      "id": "c4",
+      "name": "Filters",
+      "icon": "⚙️"
+    },
+    {
+      "id": "c5",
+      "name": "Electrical",
+      "icon": "💡"
+    },
+    {
+      "id": "c6",
+      "name": "Accessories",
+      "icon": "🛠️"
+    },
+    {
+      "id": "c7",
+      "name": "Bike Parts",
+      "icon": "🏍️"
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Rahul Sharma",
+      "email": "rahul@example.com",
+      "password": "Rahul@123",
+      "number": "9876543210",
+      "dob": "2001-05-15",
+      "gender": "Male"
+    },
+    {
+      "id": "u2",
+      "name": "Priya Reddy",
+      "email": "priya@example.com",
+      "password": "Priya@123",
+      "number": "9123456780",
+      "dob": "2002-08-20",
+      "gender": "Female"
+    },
+    {
+      "id": "_mclh9kRa7o",
+      "name": "Gvishnu",
+      "email": "gvn2@gmail.com",
+      "number": "9283748378",
+      "password": "Gvishnu@4"
+    }
+  ],
+  "cart": [
+    {
+      "id": "cart1",
+      "userId": "u1",
+      "productId": "p4",
+      "quantity": 2
+    },
+    {
+      "id": "cart2",
+      "userId": "u1",
+      "productId": "p7",
+      "quantity": 1
+    },
+    {
+      "id": "cart3",
+      "userId": "u2",
+      "productId": "p1",
+      "quantity": 1
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "w1",
+      "userId": "u1",
+      "productId": "p7"
+    }
+  ],
+  "orders": [
+    {
+      "id": "o1",
+      "userId": "u1",
+      "items": [
+        {
+          "productId": "p4",
+          "quantity": 2
+        },
+        {
+          "productId": "p7",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 2047,
+      "address": "Hyderabad, Telangana",
+      "status": "Delivered",
+      "orderDate": "2026-08-20"
+    },
+    {
+      "id": "o2",
+      "userId": "u2",
+      "items": [
+        {
+          "productId": "p1",
+          "quantity": 1
+        },
+        {
+          "productId": "p10",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 1698,
+      "address": "Vijayawada, Andhra Pradesh",
+      "status": "Shipped",
+      "orderDate": "2026-08-27"
+    },
+    {
+      "userId": "u1",
+      "items": [
+        {
+          "productId": "p1",
+          "name": "Brake Disc Rotor",
+          "price": 1499,
+          "quantity": 1
+        },
+        {
+          "productId": "p2",
+          "name": "Brake Pad Set",
+          "price": 899,
+          "quantity": 1
+        }
+      ],
+      "address": "huzurabad",
+      "city": "huzurabad",
+      "pincode": "500088",
+      "phone": "8787344351",
+      "paymentMethod": "Cash on Delivery",
+      "totalAmount": 2537,
+      "status": "Order Placed",
+      "orderDate": "9/2/2026",
+      "id": "f6AGNStbrcE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
