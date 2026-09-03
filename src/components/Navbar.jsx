@@ -1,4 +1,4 @@
- import '../styles/nav.css'
+import '../styles/nav.css';
 import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaHeart, FaShoppingCart, FaUser } from 'react-icons/fa';
@@ -25,6 +25,7 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
+
     if (search.trim()) {
       navigate(`/category/All?search=${encodeURIComponent(search.trim())}`);
     }
@@ -33,7 +34,9 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <div className="navbar">
-        <Link to="/" className="logo">AutoPartsHub | Bike & Car Parts</Link>
+        <Link to="/" className="logo">
+          AutoPartsHub | Bike & Car Parts
+        </Link>
 
         <form onSubmit={handleSearch} className="search-form">
           <input
@@ -46,7 +49,10 @@ const Navbar = () => {
         </form>
 
         <div className="navbar-icons">
-          <FaHeart className="icon" onClick={() => navigate('/wishlist')} />
+          <FaHeart
+            className="icon"
+            onClick={() => navigate('/wishlist')}
+          />
 
           <div className="cart-icon" onClick={goToCart}>
             <FaShoppingCart className="icon" />
@@ -70,4 +76,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

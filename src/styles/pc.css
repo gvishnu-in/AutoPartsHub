@@ -142,3 +142,19 @@
   background: var(--color-accent-hover);
   box-shadow: 0 2px 12px var(--color-accent-glow);
 }
+@media (max-width: 768px) {
+  .product-list {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}

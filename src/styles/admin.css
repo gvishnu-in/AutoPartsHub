@@ -177,3 +177,10 @@
 .delete-btn:hover {
   background: var(--color-accent-hover);
 }
+@media (max-width: 768px) {
+  .admin-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

@@ -158,3 +158,13 @@
   box-shadow: 0 2px 12px var(--color-accent-glow);
   transform: translateY(-1px);
 }
+@media (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+  }
+
+  .cart-item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

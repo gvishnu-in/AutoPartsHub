@@ -109,3 +109,14 @@
   text-decoration: line-through;
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 22px;
+    padding: 0 15px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+}
