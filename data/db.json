@@ -343,6 +343,13 @@
       "email": "gvn2@gmail.com",
       "number": "9283748378",
       "password": "Gvishnu@4"
+    },
+    {
+      "name": "gvishnu",
+      "email": "vishnuvardhangadipe1@gmail.com",
+      "number": "9876543219",
+      "password": "Gvishnu@3",
+      "id": "xk7C9Hw0M7s"
     }
   ],
   "cart": [
@@ -434,6 +441,26 @@
       "status": "Order Placed",
       "orderDate": "9/2/2026",
       "id": "f6AGNStbrcE"
+    },
+    {
+      "userId": "xk7C9Hw0M7s",
+      "items": [
+        {
+          "productId": "p5",
+          "name": "Rear Brake Disc",
+          "price": 1499,
+          "quantity": 1
+        }
+      ],
+      "address": "hyderabad",
+      "city": "hyderabad",
+      "pincode": "500088",
+      "phone": "9876543219",
+      "paymentMethod": "Cash on Delivery",
+      "totalAmount": 1499,
+      "status": "Order Placed",
+      "orderDate": "9/11/2026",
+      "id": "DSBZJv9EYSM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

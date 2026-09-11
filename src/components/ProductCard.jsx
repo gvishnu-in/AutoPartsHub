@@ -33,6 +33,7 @@ const ProductCard = ({ product, onRemoveWishlist }) => {
   const handleCart = (e) => {
     e.stopPropagation();
     addToCart(product);
+    alert('Added to cart!');
   };
 
   return (

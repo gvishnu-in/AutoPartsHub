@@ -1,35 +1,32 @@
-/* eslint-disable react-refresh/only-export-components */
-import { createContext, useState, useEffect } from "react";
+
+import { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
 import API_URL from "../apiConfig";
+import { AuthContext } from "./AuthContext";
+
 export const WishlistContext = createContext();
 
 const WishlistContextProvider = ({ children }) => {
-
   const [wishlist, setWishlist] = useState([]);
-
-  const user = JSON.parse(localStorage.getItem("user"));
-  const userId = user?.id;
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
-
-    if (!userId) {
+    if (!user) {
+      setWishlist([]);
       return;
     }
 
     axios
-      .get(`${API_URL}/wishlist?userId=${userId}`)
+      .get(`${API_URL}/wishlist?userId=${user.id}`)
       .then((res) => {
         setWishlist(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-
-  }, [userId]);
+  }, [user]);
 
   const addToWishlist = async (product) => {
-
     if (!user) {
       alert("Please login first");
       return;
@@ -49,58 +46,36 @@ const WishlistContextProvider = ({ children }) => {
     };
 
     try {
-
-      const res = await axios.post(
-        `${API_URL}/wishlist`,
-        newItem
-      );
-
+      const res = await axios.post(`${API_URL}/wishlist`, newItem);
       setWishlist([...wishlist, res.data]);
-
     } catch (error) {
       console.log(error);
     }
   };
 
   const removeFromWishlist = async (productId) => {
-
-    const item = wishlist.find(
-      (item) => item.productId === productId
-    );
+    const item = wishlist.find((item) => item.productId === productId);
 
     if (!item) return;
 
     try {
-
-      await axios.delete(
-        `${API_URL}/wishlist/${item.id}`
-      );
-
-      setWishlist(
-        wishlist.filter((item) => item.productId !== productId)
-      );
-
+      await axios.delete(`${API_URL}/wishlist/${item.id}`);
+      setWishlist(wishlist.filter((item) => item.productId !== productId));
     } catch (error) {
       console.log(error);
     }
   };
 
   const isInWishlist = (productId) => {
-
-    return wishlist.some(
-      (item) => item.productId === productId
-    );
-
+    return wishlist.some((item) => item.productId === productId);
   };
 
   const toggleWishlist = (product) => {
-
     if (isInWishlist(product.id)) {
       removeFromWishlist(product.id);
     } else {
       addToWishlist(product);
     }
-
   };
 
   return (

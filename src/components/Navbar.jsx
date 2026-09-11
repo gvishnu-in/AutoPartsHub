@@ -1,4 +1,4 @@
-import '../styles/nav.css';
+import '../styles/nav.css'
 import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaHeart, FaShoppingCart, FaUser } from 'react-icons/fa';
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
   const { cartCount } = useContext(CartContext);
-  const { user } = useContext(AuthContext);
+  const { user, logoutUser } = useContext(AuthContext);
 
   const goToCart = () => {
     navigate('/cart');
@@ -23,36 +23,26 @@ const Navbar = () => {
     }
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-
-    if (search.trim()) {
-      navigate(`/category/All?search=${encodeURIComponent(search.trim())}`);
-    }
+  const handleLogout = () => {
+    logoutUser();
+    navigate('/');
   };
 
   return (
     <div className="navbar-wrapper">
       <div className="navbar">
-        <Link to="/" className="logo">
-          AutoPartsHub | Bike & Car Parts
-        </Link>
+        <Link to="/" className="logo">AutoPartsHub</Link>
 
-        <form onSubmit={handleSearch} className="search-form">
-          <input
-            type="text"
-            placeholder="Search auto parts..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="search-input"
-          />
-        </form>
+        <input
+          type="text"
+          placeholder="Search auto parts..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="search-input"
+        />
 
         <div className="navbar-icons">
-          <FaHeart
-            className="icon"
-            onClick={() => navigate('/wishlist')}
-          />
+          <FaHeart className="icon" onClick={() => navigate('/wishlist')} />
 
           <div className="cart-icon" onClick={goToCart}>
             <FaShoppingCart className="icon" />
@@ -60,6 +50,8 @@ const Navbar = () => {
           </div>
 
           <FaUser className="icon" onClick={goToProfile} />
+
+          {user && <button className="logout-btn" onClick={handleLogout}>Logout</button>}
         </div>
       </div>
 
@@ -69,11 +61,11 @@ const Navbar = () => {
         <Link to="/category/Braking System">Braking System</Link>
         <Link to="/category/Body Parts">Body Parts</Link>
         <Link to="/category/Filters">Filters</Link>
-        <Link to="/admin">Admin Panel</Link>
         <Link to="/category/Bike Parts">Bike Parts</Link>
+        <Link to="/admin">Admin Panel</Link>
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default Navbar

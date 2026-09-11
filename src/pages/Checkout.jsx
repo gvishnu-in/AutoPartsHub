@@ -1,8 +1,11 @@
- import '../styles/co.css'
-import { useState } from 'react';
+import React from 'react'
+import '../styles/co.css'
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import API_URL from '../apiConfig';
+import { CartContext } from '../context/CartContext';
+import { AuthContext } from '../context/AuthContext';
 
 const Checkout = () => {
   const [address, setAddress] = useState('');
@@ -11,6 +14,8 @@ const Checkout = () => {
   const [phone, setPhone] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('UPI');
   const navigate = useNavigate();
+  const { cartItems, clearCart } = useContext(CartContext);
+  const { user } = useContext(AuthContext);
 
   const url = `${API_URL}/orders`;
 
@@ -19,8 +24,14 @@ const Checkout = () => {
       alert('Please fill all address fields');
       return false;
     }
+    if (cartItems.length === 0) {
+      alert('Your cart is empty');
+      return false;
+    }
     return true;
   };
+
+  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const placeOrder = (e) => {
     e.preventDefault();
@@ -30,25 +41,27 @@ const Checkout = () => {
     }
 
     const orderData = {
-      userId: 'u1',
-      items: [
-        { productId: 'p1', name: 'Brake Disc Rotor', price: 1499, quantity: 1 },
-        { productId: 'p2', name: 'Brake Pad Set', price: 899, quantity: 1 },
-      ],
+      userId: user ? user.id : 'guest',
+      items: cartItems.map((item) => ({
+        productId: item.id,
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+      })),
       address: address,
       city: city,
       pincode: pincode,
       phone: phone,
       paymentMethod: paymentMethod,
-      totalAmount: 2537,
+      totalAmount: total,
       status: 'Order Placed',
       orderDate: new Date().toLocaleDateString(),
     };
 
     axios.post(url, orderData)
       .then((res) => {
-        console.log(res.data);
         alert('Order placed successfully');
+        clearCart();
         navigate(`/track/${res.data.id}`);
       })
       .catch((err) => {
@@ -80,6 +93,8 @@ const Checkout = () => {
           <option value="Card">Card</option>
           <option value="Cash on Delivery">Cash on Delivery</option>
         </select>
+
+        <p className="order-total">Total Amount: ₹{total}</p>
 
         <button type="submit">Place Order</button>
       </form>
