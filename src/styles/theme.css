@@ -1,11 +1,11 @@
 :root {
-  --color-bg: #121212;
-  --color-bg-alt: #181818;
-  --color-surface: #1e1e1e;
-  --color-surface-alt: #242424;
+  --color-bg: #101112;
+  --color-bg-alt: #17191b;
+  --color-surface: #1d2022;
+  --color-surface-alt: #25292c;
 
-  --color-border: #2f2f2f;
-  --color-border-light: #3d3d3d;
+  --color-border: #303538;
+  --color-border-light: #454b4f;
   --color-steel: #555555;
   --color-steel-light: #7a7a7a;
 
@@ -14,8 +14,8 @@
   --color-accent-glow: rgba(211, 47, 47, 0.35);
 
   --color-text: #f2f2f2;
-  --color-text-dim: #aaaaaa;
-  --color-text-muted: #6e6e6e;
+  --color-text-dim: #b5b9bb;
+  --color-text-muted: #81878a;
 
   --font-display: 'Bebas Neue', 'Oswald', sans-serif;
   --font-heading: 'Oswald', sans-serif;
@@ -24,8 +24,8 @@
 
   --radius-sm: 2px;
   --radius-md: 4px;
-  --shadow-panel: 0 6px 24px rgba(0, 0, 0, 0.55);
-  --transition: all 0.25s ease;
+  --shadow-panel: 0 10px 28px rgba(0, 0, 0, 0.35);
+  --transition: all 0.2s ease;
 }
 
 *,
@@ -84,6 +84,7 @@ select {
 .panel {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-panel);
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
 }
 
@@ -110,11 +111,11 @@ select {
 
 .section-title {
   text-align: center;
-  margin: 55px 0 25px;
+  margin: 64px 0 28px;
   font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 22px;
+  font-size: 24px;
   color: var(--color-text);
   position: relative;
   max-width: 100%;
@@ -136,9 +137,13 @@ select {
   background-size: 42px 42px;
 }
 
+button {
+  font: inherit;
+}
+
 @media (max-width: 768px) {
   .section-title {
-    margin: 40px 15px 22px;
+    margin: 48px 15px 22px;
     font-size: 20px;
     letter-spacing: 2px;
   }

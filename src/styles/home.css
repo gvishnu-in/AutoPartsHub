@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  padding: 80px 60px;
+  gap: clamp(28px, 5vw, 64px);
+  padding: clamp(56px, 8vw, 96px) clamp(24px, 7vw, 88px);
   background:
     linear-gradient(rgba(18,18,18,0.8), rgba(18,18,18,0.92)),
     linear-gradient(var(--color-border) 1px, transparent 1px),
@@ -16,7 +16,7 @@
 
 .hero-content {
   flex: 1;
-  min-width: 280px;
+  min-width: 0;
   text-align: left;
 }
 
@@ -32,7 +32,7 @@
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: 46px;
+  font-size: clamp(34px, 5vw, 54px);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--color-text);
@@ -41,10 +41,10 @@
 }
 
 .hero-deal-card {
-  width: 300px;
+  width: min(100%, 320px);
   cursor: pointer;
   position: relative;
-  padding: 22px;
+  padding: 24px;
   transition: var(--transition);
 }
 
@@ -55,8 +55,11 @@
 
 .hero-deal-card img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: contain;
+  background: var(--color-bg);
+  padding: 10px;
   border-radius: var(--radius-sm);
   margin-bottom: 16px;
   border: 1px solid var(--color-border-light);
@@ -111,12 +114,45 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .hero-content,
+  .hero-deal-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
   .hero h1 {
-    font-size: 22px;
-    padding: 0 15px;
+    font-size: clamp(30px, 8vw, 42px);
+    padding: 0;
   }
 
   .hero {
     padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    gap: 26px;
+    padding: 36px 14px;
+  }
+
+  .hero-tagline {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .hero-deal-card {
+    padding: 16px;
   }
 }
