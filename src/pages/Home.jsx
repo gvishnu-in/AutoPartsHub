@@ -11,6 +11,10 @@ import API_URL from '../apiConfig';
 const Home = () => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
+  const categoryRoutes = {
+    allParts: '/category/All',
+    bikeParts: '/category/Bike Parts',
+  };
 
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -34,11 +38,19 @@ const Home = () => {
     <div>
       <div className="hero">
         <div className="hero-content">
-          <span className="hero-tagline">Precision Parts. Built to Last.</span>
-          <h1>Best Quality Parts for Your Ride</h1>
-          <button className="btn-industrial" onClick={() => navigate('/category/All')}>
-            Shop Now
-          </button>
+          <span className="hero-tagline">Trusted parts. Confident journeys.</span>
+          <h1>Premium Spare Parts for Every Ride</h1>
+          <p className="hero-description">
+            Quality car and bike spare parts built for performance, safety and reliability.
+          </p>
+          <div className="hero-actions">
+            <button className="btn-industrial" onClick={() => navigate(categoryRoutes.allParts)}>
+              Shop Car Parts
+            </button>
+            <button className="btn-outline" onClick={() => navigate(categoryRoutes.bikeParts)}>
+              Shop Bike Parts
+            </button>
+          </div>
         </div>
 
         {spotlight && (
@@ -57,14 +69,27 @@ const Home = () => {
         )}
       </div>
 
-      <h2 className="section-title">Top Categories</h2>
+      <section className="category-section">
+        <div className="section-heading">
+          <span className="eyebrow">Shop by system</span>
+          <h2 className="section-title">Find the Right Parts for Your Vehicle</h2>
+          <p>Explore quality spare parts for cars and bikes, organized to help you find what you need faster.</p>
+        </div>
       {loading ? <p>Loading...</p> : (
         <div className="category-list">
           {categories.map((cat) => <CategoryCard key={cat.id} category={cat} />)}
         </div>
       )}
+      </section>
 
-      <h2 className="section-title">Deals of the Day</h2>
+      <section className="deals-section">
+        <div className="section-heading section-heading-inline">
+          <div>
+            <span className="eyebrow">Selected for you</span>
+            <h2 className="section-title">Deals of the Day</h2>
+          </div>
+          <button className="text-link" onClick={() => navigate(categoryRoutes.allParts)}>View all parts →</button>
+        </div>
       {loading ? <p>Loading...</p> : (
         <div className="product-list">
           {dealsOfTheDay.map((prod) => (
@@ -72,6 +97,7 @@ const Home = () => {
           ))}
         </div>
       )}
+      </section>
     </div>
   );
 };
