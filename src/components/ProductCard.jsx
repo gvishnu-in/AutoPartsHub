@@ -69,6 +69,9 @@ const ProductCard = ({ product, onRemoveWishlist }) => {
       </div>
 
       <p className="product-rating">⭐ {product.rating}</p>
+      <p className={`product-stock ${product.stock > 0 ? 'in-stock' : 'out-of-stock'}`}>
+        {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
+      </p>
 
       <button onClick={handleCart}>
         <FaShoppingCart /> Add to Cart
