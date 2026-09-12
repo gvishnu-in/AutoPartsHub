@@ -1,31 +1,31 @@
 :root {
-  --color-bg: #101112;
-  --color-bg-alt: #17191b;
-  --color-surface: #1d2022;
-  --color-surface-alt: #25292c;
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #141414;
+  --color-surface: #1b1b1b;
+  --color-surface-alt: #222222;
 
-  --color-border: #303538;
-  --color-border-light: #454b4f;
-  --color-steel: #555555;
-  --color-steel-light: #7a7a7a;
+  --color-border: #2d2d2d;
+  --color-border-light: #3e3e3e;
+  --color-steel: #7a7a7a;
+  --color-steel-light: #b9b9b9;
 
-  --color-accent: #d32f2f;
-  --color-accent-hover: #b71c1c;
-  --color-accent-glow: rgba(211, 47, 47, 0.35);
+  --color-accent: #f04d2a;
+  --color-accent-hover: #d83d1f;
+  --color-accent-glow: rgba(240, 77, 42, 0.32);
 
-  --color-text: #f2f2f2;
-  --color-text-dim: #b5b9bb;
-  --color-text-muted: #81878a;
+  --color-text: #f5f5f5;
+  --color-text-dim: #d0d0d0;
+  --color-text-muted: #8d8d8d;
 
   --font-display: 'Bebas Neue', 'Oswald', sans-serif;
   --font-heading: 'Oswald', sans-serif;
   --font-logo: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --shadow-panel: 0 10px 28px rgba(0, 0, 0, 0.35);
-  --transition: all 0.2s ease;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --shadow-panel: 0 14px 35px rgba(0, 0, 0, 0.45);
+  --transition: all 0.25s ease;
 }
 
 *,
@@ -84,8 +84,7 @@ select {
 .panel {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-panel);
-  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  border-radius: var(--radius-md);
 }
 
 .btn-industrial {
@@ -110,24 +109,19 @@ select {
 }
 
 .section-title {
-  text-align: center;
-  margin: 64px 0 28px;
+  margin: 4px 0 0;
   font-family: var(--font-heading);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 24px;
+  letter-spacing: -0.4px;
+  font-size: 30px;
   color: var(--color-text);
   position: relative;
   max-width: 100%;
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--color-accent);
-  margin: 12px auto 0;
+.section-heading > p {
+  color: var(--color-text-dim);
+  margin: 10px 0 0;
+  font-size: 15px;
 }
 
 .industrial-grid {
@@ -143,9 +137,8 @@ button {
 
 @media (max-width: 768px) {
   .section-title {
-    margin: 48px 15px 22px;
-    font-size: 20px;
-    letter-spacing: 2px;
+    margin: 0;
+    font-size: 25px;
   }
 
   .btn-industrial {
@@ -156,7 +149,7 @@ button {
 
 @media (max-width: 480px) {
   .section-title {
-    margin: 35px 12px 20px;
+    margin: 0;
     font-size: 18px;
     letter-spacing: 1.5px;
   }

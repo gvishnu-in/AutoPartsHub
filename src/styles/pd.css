@@ -15,7 +15,7 @@
   aspect-ratio: 1;
   height: auto;
   object-fit: contain;
-  padding: 18px;
+  padding: 22px;
   background: #0d0e0f;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
@@ -140,6 +140,26 @@
     width: 100%;
     aspect-ratio: 1;
     height: auto;
-    padding: 14px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .product-details {
+    padding: 22px 14px 32px;
+    gap: 20px;
+  }
+
+  .details-info h2 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 23px;
+  }
+
+  .add-cart-btn {
+    width: 100%;
+    padding-inline: 20px;
   }
 }

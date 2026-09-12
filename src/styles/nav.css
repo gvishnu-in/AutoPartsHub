@@ -1,7 +1,8 @@
 .navbar-wrapper {
   width: 100%;
   max-width: 100%;
-  background: var(--color-bg-alt);
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
@@ -10,49 +11,50 @@
 }
 
 .navbar {
-  width: 100%;
-  max-width: 100%;
+  width: min(1180px, 100%);
+  margin: 0 auto;
   min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px clamp(20px, 4vw, 56px);
-  gap: 28px;
+  padding: 15px 24px;
+  gap: 20px;
   box-sizing: border-box;
 }
 
 .logo {
   flex-shrink: 1;
   font-family: var(--font-logo);
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
   text-decoration: none;
-  color: var(--color-text);
-  letter-spacing: 0.8px;
+  color: #f0f0f0;
+  letter-spacing: 0.5px;
   white-space: nowrap;
   max-width: 100%;
   transition: var(--transition);
 }
 
 .logo:hover {
-  color: var(--color-accent);
+  color: #ff9b7a;
 }
 
 .search-form {
   flex: 1 1 460px;
   width: 100%;
-  max-width: 520px;
-  min-width: 180px;
-  margin: 0 auto;
+  max-width: 500px;
+  min-width: 0;
+  margin: 0 20px;
 }
 
 .search-input {
   width: 100%;
   max-width: 100%;
-  padding: 12px 16px;
-  background: var(--color-surface);
+  padding: 11px 16px;
+  background: var(--color-surface-alt);
   border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
+  font-family: var(--font-body);
   font-size: 14px;
   color: var(--color-text);
   outline: none;
@@ -127,15 +129,15 @@
 }
 
 .navbar-links {
-  width: 100%;
-  max-width: 100%;
+  width: min(1180px, 100%);
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px 32px;
-  padding: 13px 20px;
-  background: var(--color-surface);
+  gap: 12px 28px;
+  padding: 11px 20px;
+  background: var(--color-bg-alt);
   border-top: 1px solid var(--color-border);
   box-sizing: border-box;
 }
@@ -257,12 +259,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 12px 18px;
+    gap: 10px 16px;
     padding: 12px;
   }
 
   .navbar-links a {
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: 1px;
     white-space: nowrap;
   }
@@ -324,6 +326,10 @@
 
   .icon {
     font-size: 16px;
+  }
+
+  .navbar-icons {
+    gap: 9px;
   }
 
   .navbar-links {
