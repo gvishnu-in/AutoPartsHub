@@ -4,13 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-<<<<<<< HEAD
-  gap: 48px;
-  padding: 80px max(24px, calc((100% - 1180px) / 2));
-=======
   gap: clamp(28px, 5vw, 64px);
   padding: clamp(56px, 8vw, 96px) clamp(24px, 7vw, 88px);
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   background:
     linear-gradient(90deg, rgba(10, 10, 10, 0.96) 18%, rgba(10, 10, 10, 0.82) 55%, rgba(10, 10, 10, 0.58)),
     url('/images/p9.png') center/cover;
@@ -19,14 +14,17 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.12), transparent 55%, rgba(240, 77, 42, 0.06));
+}
+
 .hero-content {
-<<<<<<< HEAD
   flex: 1 1 540px;
   min-width: 280px;
-=======
-  flex: 1;
-  min-width: 0;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   text-align: left;
   position: relative;
   z-index: 1;
@@ -44,7 +42,6 @@
 
 .hero h1 {
   font-family: var(--font-display);
-<<<<<<< HEAD
   font-size: clamp(42px, 5vw, 68px);
   letter-spacing: 0.5px;
   color: #fff;
@@ -59,12 +56,6 @@
   font-size: 17px;
   line-height: 1.65;
   max-width: 560px;
-=======
-  font-size: clamp(34px, 5vw, 54px);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--color-text);
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   margin: 0 0 30px;
 }
 
@@ -94,21 +85,14 @@
 }
 
 .hero-deal-card {
-<<<<<<< HEAD
   flex: 0 1 310px;
-  width: 310px;
-  cursor: pointer;
-  position: relative;
-  padding: 22px;
-  background: rgba(22, 22, 22, 0.96);
-  border: 1px solid var(--color-border-light);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-=======
   width: min(100%, 320px);
   cursor: pointer;
   position: relative;
   padding: 24px;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
+  background: rgba(22, 22, 22, 0.96);
+  border: 1px solid var(--color-border-light);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   transition: var(--transition);
 }
 
@@ -119,17 +103,11 @@
 
 .hero-deal-card img {
   width: 100%;
-<<<<<<< HEAD
-  height: 160px;
-  object-fit: contain;
-  background: var(--color-surface-alt);
-=======
   aspect-ratio: 16 / 10;
   height: auto;
   object-fit: contain;
-  background: var(--color-bg);
   padding: 10px;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
+  background: #111214;
   border-radius: var(--radius-sm);
   margin-bottom: 16px;
   border: 1px solid var(--color-border-light);
@@ -187,6 +165,7 @@
   .hero {
     align-items: flex-start;
     gap: 32px;
+    padding: 58px 20px;
   }
 
   .hero-content,
@@ -196,18 +175,12 @@
     margin: 0 auto;
   }
 
-  .hero h1 {
-<<<<<<< HEAD
-    font-size: 42px;
-=======
-    font-size: clamp(30px, 8vw, 42px);
-    padding: 0;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
+  .hero-content {
+    min-width: 0;
   }
 
-  .hero {
-    padding: 58px 20px;
-    gap: 32px;
+  .hero h1 {
+    font-size: 42px;
   }
 
   .hero-deal-card {
@@ -292,5 +265,13 @@
 
   .hero-deal-card {
     padding: 16px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions button {
+    flex: 1 1 140px;
   }
 }

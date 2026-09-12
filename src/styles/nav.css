@@ -17,32 +17,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-<<<<<<< HEAD
   padding: 15px 24px;
   gap: 20px;
-=======
-  padding: 18px clamp(20px, 4vw, 56px);
-  gap: 28px;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   box-sizing: border-box;
 }
 
 .logo {
   flex-shrink: 1;
   font-family: var(--font-logo);
-<<<<<<< HEAD
   font-size: 19px;
   font-weight: 700;
   text-decoration: none;
   color: #f0f0f0;
   letter-spacing: 0.5px;
-=======
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--color-text);
-  letter-spacing: 0.8px;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   white-space: nowrap;
   max-width: 100%;
   transition: var(--transition);
@@ -55,32 +42,19 @@
 .search-form {
   flex: 1 1 460px;
   width: 100%;
-<<<<<<< HEAD
   max-width: 500px;
   min-width: 0;
   margin: 0 20px;
-=======
-  max-width: 520px;
-  min-width: 180px;
-  margin: 0 auto;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
 }
 
 .search-input {
   width: 100%;
   max-width: 100%;
-<<<<<<< HEAD
   padding: 11px 16px;
   background: var(--color-surface-alt);
   border: 1px solid var(--color-border-light);
   border-radius: 999px;
   font-family: var(--font-body);
-=======
-  padding: 12px 16px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-sm);
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   font-size: 14px;
   color: var(--color-text);
   outline: none;
@@ -161,15 +135,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-<<<<<<< HEAD
   gap: 12px 28px;
   padding: 11px 20px;
   background: var(--color-bg-alt);
-=======
-  gap: 16px 32px;
-  padding: 13px 20px;
-  background: var(--color-surface);
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   border-top: 1px solid var(--color-border);
   box-sizing: border-box;
 }
@@ -358,6 +326,10 @@
 
   .icon {
     font-size: 16px;
+  }
+
+  .navbar-icons {
+    gap: 9px;
   }
 
   .navbar-links {

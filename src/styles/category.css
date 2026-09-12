@@ -1,32 +1,16 @@
 .category-page {
   min-height: 60vh;
-<<<<<<< HEAD
   padding: 48px max(16px, calc((100% - 1180px) / 2)) 20px;
-=======
-  padding: 52px clamp(20px, 5vw, 64px) 48px;
-  background:
-    linear-gradient(var(--color-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
-  background-size: 42px 42px;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   background-color: var(--color-bg);
 }
 
 .category-page h2 {
   text-align: left;
   font-family: var(--font-heading);
-<<<<<<< HEAD
   letter-spacing: -0.4px;
   font-size: 32px;
   color: var(--color-text);
   margin: 0;
-=======
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 24px;
-  color: var(--color-text);
-  margin: 0 0 40px;
->>>>>>> 0542c3c (Refactor styles and components for improved layout and performance)
   position: relative;
 }
 
