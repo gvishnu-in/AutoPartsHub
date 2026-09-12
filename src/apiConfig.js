@@ -1,3 +1,3 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://autopartshub-zzoe.onrender.com';
 
 export default API_URL;
