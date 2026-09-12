@@ -28,18 +28,32 @@ const Navbar = () => {
     navigate('/');
   };
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const searchTerm = search.trim();
+
+    if (searchTerm) {
+      navigate(`/category/All?search=${encodeURIComponent(searchTerm)}`);
+    } else {
+      navigate('/category/All');
+    }
+  };
+
   return (
     <div className="navbar-wrapper">
       <div className="navbar">
         <Link to="/" className="logo">AutoPartsHub</Link>
 
-        <input
-          type="text"
-          placeholder="Search auto parts..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="search-input"
-        />
+        <form className="search-form" onSubmit={handleSearch}>
+          <input
+            type="search"
+            placeholder="Search auto parts..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="search-input"
+            aria-label="Search auto parts"
+          />
+        </form>
 
         <div className="navbar-icons">
           <FaHeart className="icon" onClick={() => navigate('/wishlist')} />
