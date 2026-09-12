@@ -66,6 +66,20 @@
   z-index: 2;
 }
 
+.product-image .discount-badge {
+  top: 8px;
+  left: 8px;
+}
+
+.product-image > .category-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: auto;
+  bottom: auto;
+  z-index: 2;
+}
+
 .wishlist-button {
   position: absolute;
   top: 10px;
